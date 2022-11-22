@@ -29,8 +29,8 @@ public class MeetingRoom {
     private int size;
 
     @OneToMany
-    @JoinColumn(name = "meetingRoom_id")
-    @JsonIgnoreProperties("meetingRoom")
+    @JoinColumn(name = "meetingroom_id")
+    @JsonIgnoreProperties("meetingroom")
     private Set<Booking> bookings;
     
 }

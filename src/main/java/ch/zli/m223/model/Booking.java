@@ -32,7 +32,7 @@ public class Booking {
     private LocalDate date;
 
     @Column(nullable = false)
-    private boolean wholeDay;
+    private boolean wholeday;
 
     @Column(nullable = false)
     private Long bookingnumber;
@@ -44,13 +44,13 @@ public class Booking {
     private String status;
 
     @Column(nullable = true)
-    private LocalDateTime startTime;
+    private LocalDateTime starttime;
 
     @Column(nullable = true)
-    private LocalDateTime endTime;
+    private LocalDateTime endtime;
 
     @ManyToOne
-    public MeetingRoom meetingRoom;
+    public MeetingRoom meetingroom;
 
     @ManyToOne
     public User user;
