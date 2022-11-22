@@ -13,8 +13,9 @@ public class BookingService {
     private EntityManager entityManager;
 
     public Booking getBooking(int id) {
-        var query = entityManager.createQuery("FROM Booking b WHERE b.id=:id", Booking.class).setParameter("id", id);
-        return query.getSingleResult();
+        //var query = entityManager.createQuery("FROM Booking b WHERE b.id=:id", Booking.class).setParameter("id", id);
+        var query = entityManager.find(Booking.class, id);
+        return query;
     }
 
 }
