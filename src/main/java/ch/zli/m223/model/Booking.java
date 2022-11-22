@@ -1,6 +1,7 @@
 package ch.zli.m223.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import javax.persistence.Column;
@@ -42,6 +43,15 @@ public class Booking {
     @Column(nullable = false)
     private String status;
 
+    @Column(nullable = true)
+    private LocalDateTime startTime;
+
+    @Column(nullable = true)
+    private LocalDateTime endTime;
+
+    @ManyToOne
+    public MeetingRoom meetingRoom;
+
     @ManyToOne
     public User user;
 
@@ -50,4 +60,5 @@ public class Booking {
     @JsonIgnoreProperties("bookings")
     @Fetch(FetchMode.JOIN)
     private Set<Equipment> equipments;
+
 }
