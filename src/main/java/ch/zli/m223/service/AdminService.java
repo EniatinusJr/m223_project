@@ -45,5 +45,20 @@ public class AdminService {
         entityManager.persist(user);
         return user;
     }
+
+    @Transactional
+    public Booking acceptBooking(Booking booking) {
+        return entityManager.merge(booking);
+    }
+
+    @Transactional
+    public Booking declineBooking(Booking booking) {
+        return entityManager.merge(booking);
+    }
+
+    @Transactional
+    public Booking edtBooking(Booking booking) {
+        return entityManager.merge(booking);
+    }
     
 }

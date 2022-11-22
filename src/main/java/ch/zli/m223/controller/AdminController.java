@@ -67,4 +67,31 @@ public class AdminController {
        return adminService.createUser(user);
     }
 
+    @PUT
+    @Path("/booking/accept/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Accepts a booking", description = "Accepts a booking")
+    public Booking accept(Booking booking) {
+        return adminService.acceptBooking(booking);
+    }
+    
+    @PUT
+    @Path("/booking/decline/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Declines a booking", description = "Declines a booking")
+    public Booking decline(Booking booking) {
+        return adminService.declineBooking(booking);
+    }
+
+    @PUT
+    @Path("/booking/edit/")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Edit a booking", description = "Edit a booking")
+    public Booking edit(Booking booking) {
+        return adminService.edtBooking(booking);
+    }
+
 }
