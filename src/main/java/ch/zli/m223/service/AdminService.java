@@ -1,0 +1,24 @@
+package ch.zli.m223.service;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+
+import ch.zli.m223.model.Booking;
+
+@ApplicationScoped
+public class AdminService {
+
+    @Inject
+    private EntityManager entityManager;
+
+    public List<Booking> findAll(LocalDate date) {
+        var query = entityManager.createQuery("FROM Booking b WHERE b.date=:date", Booking.class).setParameter("date", date);
+        //var query = entityManager.find(Booking.class, date);
+        return query.getResultList();
+    }
+    
+}
