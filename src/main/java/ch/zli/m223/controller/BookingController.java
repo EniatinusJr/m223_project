@@ -1,8 +1,10 @@
 package ch.zli.m223.controller;
 
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -34,6 +36,14 @@ public class BookingController {
     @Operation(summary = "Deletes one booking.", description = "Deletes one booking.")
     public void cancel(@PathParam("id") int id) {
         bookingService.cancelBooking(id);
+    }
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Creates a new booking.", description = "Creates a new booking and returns the newly added booking.")
+    public Booking create(Booking booking) {
+       return bookingService.createBooking(booking);
     }
 
 }

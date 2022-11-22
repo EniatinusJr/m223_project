@@ -25,4 +25,10 @@ public class BookingService {
         entityManager.remove(entity);
     }
 
+    @Transactional
+    public Booking createBooking(Booking booking) {
+        entityManager.persist(booking);
+        return booking;
+    }
+
 }
