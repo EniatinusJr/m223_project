@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
@@ -32,4 +33,7 @@ public class Booking {
 
     @Column(nullable = false)
     private String status;
+
+    @ManyToOne
+    public User user;
 }
