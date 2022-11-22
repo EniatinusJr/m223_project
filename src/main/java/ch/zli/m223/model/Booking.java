@@ -18,7 +18,7 @@ import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Booking {
@@ -57,7 +57,7 @@ public class Booking {
 
     @ManyToMany
     @JoinTable(name = "booking_equipments", joinColumns = @JoinColumn(name = "booking_id"), inverseJoinColumns = @JoinColumn(name = "equipment_id"))
-    @JsonIgnoreProperties("bookings")
+    @JsonIgnore
     @Fetch(FetchMode.JOIN)
     private Set<Equipment> equipments;
 

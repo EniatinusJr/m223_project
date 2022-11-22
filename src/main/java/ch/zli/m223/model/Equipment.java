@@ -13,7 +13,7 @@ import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Equipment {
@@ -30,7 +30,7 @@ public class Equipment {
     private float price;
 
     @ManyToMany(mappedBy = "equipments")
-    @JsonIgnoreProperties("equipments")
+    @JsonIgnore
     @Fetch(FetchMode.JOIN)
     private Set<Booking> bookingss;
 
