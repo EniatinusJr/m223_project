@@ -1,5 +1,5 @@
 package ch.zli.m223.controller;
-
+/*
 import java.util.List;
 
 import javax.inject.Inject;
@@ -59,4 +59,4 @@ public class EntryController {
         return entryService.updateEntry(entry);
     }
 
-}
+}*/

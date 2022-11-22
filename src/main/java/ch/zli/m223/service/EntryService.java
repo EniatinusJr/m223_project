@@ -1,5 +1,5 @@
 package ch.zli.m223.service;
-
+/* 
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -35,4 +35,4 @@ public class EntryService {
     public Entry updateEntry(Entry entry) {
         return entityManager.merge(entry);
     }
-}
+}*/

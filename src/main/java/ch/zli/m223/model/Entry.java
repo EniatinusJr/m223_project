@@ -1,5 +1,5 @@
 package ch.zli.m223.model;
-
+/* 
 import javax.persistence.*;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
@@ -70,4 +70,4 @@ public class Entry {
   }
   
 
-}
+}*/

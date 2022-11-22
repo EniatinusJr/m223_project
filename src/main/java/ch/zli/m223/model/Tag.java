@@ -1,5 +1,5 @@
 package ch.zli.m223.model;
-
+/*
 import java.util.Set;
 
 import javax.persistence.*;
@@ -35,4 +35,4 @@ public class Tag {
     @JsonIgnoreProperties("tags")
     Set<Entry> entries;
     
-}
+}*/
