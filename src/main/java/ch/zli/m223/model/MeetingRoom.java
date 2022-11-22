@@ -32,5 +32,39 @@ public class MeetingRoom {
     @JoinColumn(name = "meetingroom_id")
     @JsonIgnoreProperties("meetingroom")
     private Set<Booking> bookings;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getRoomnumber() {
+        return roomnumber;
+    }
+
+    public void setRoomnumber(int roomnumber) {
+        this.roomnumber = roomnumber;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public Set<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(Set<Booking> bookings) {
+        this.bookings = bookings;
+    }
     
+    
+
 }

@@ -61,4 +61,94 @@ public class Booking {
     @Fetch(FetchMode.JOIN)
     private Set<Equipment> equipments;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public boolean isWholeday() {
+        return wholeday;
+    }
+
+    public void setWholeday(boolean wholeday) {
+        this.wholeday = wholeday;
+    }
+
+    public Long getBookingnumber() {
+        return bookingnumber;
+    }
+
+    public void setBookingnumber(Long bookingnumber) {
+        this.bookingnumber = bookingnumber;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getStarttime() {
+        return starttime;
+    }
+
+    public void setStarttime(LocalDateTime starttime) {
+        this.starttime = starttime;
+    }
+
+    public LocalDateTime getEndtime() {
+        return endtime;
+    }
+
+    public void setEndtime(LocalDateTime endtime) {
+        this.endtime = endtime;
+    }
+
+    public MeetingRoom getMeetingroom() {
+        return meetingroom;
+    }
+
+    public void setMeetingroom(MeetingRoom meetingroom) {
+        this.meetingroom = meetingroom;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Set<Equipment> getEquipments() {
+        return equipments;
+    }
+
+    public void setEquipments(Set<Equipment> equipments) {
+        this.equipments = equipments;
+    }
+
+    
+
 }
