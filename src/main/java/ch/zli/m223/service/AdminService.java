@@ -39,5 +39,11 @@ public class AdminService {
         var entity = entityManager.find(User.class, id);
         entityManager.remove(entity);
     }
+
+    @Transactional
+    public User createUser(User user) {
+        entityManager.persist(user);
+        return user;
+    }
     
 }
