@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 
 import ch.zli.m223.model.Booking;
+import ch.zli.m223.model.User;
 
 @ApplicationScoped
 public class AdminService {
@@ -26,6 +27,11 @@ public class AdminService {
     public void deleteBooking(int id) {
         var entity = entityManager.find(Booking.class, id);
         entityManager.remove(entity);
+    }
+
+    @Transactional
+    public User updateUser(User user) {
+        return entityManager.merge(user);
     }
     
 }

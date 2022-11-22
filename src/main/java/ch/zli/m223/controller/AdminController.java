@@ -4,8 +4,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -15,6 +17,7 @@ import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 import ch.zli.m223.model.Booking;
+import ch.zli.m223.model.User;
 import ch.zli.m223.service.AdminService;
 
 @Path("/admin")
@@ -39,5 +42,13 @@ public class AdminController {
         adminService.deleteBooking(id);
     }
 
-    
+    @PUT
+    @Path("/member/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Operation(summary = "Updates one Entry", description = "Updates one Entry")
+    public User update(User user) {
+        return adminService.updateUser(user);
+    }
+
 }
