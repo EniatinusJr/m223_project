@@ -51,4 +51,11 @@ public class AdminController {
         return adminService.updateUser(user);
     }
 
+    @DELETE
+    @Path("/member/{id}")
+    @Operation(summary = "Deletes one user.", description = "Deletes one user.")
+    public void delete(@PathParam("id") int id) {
+        adminService.deleteUser(id);
+    }
+
 }

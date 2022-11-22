@@ -33,5 +33,11 @@ public class AdminService {
     public User updateUser(User user) {
         return entityManager.merge(user);
     }
+
+    @Transactional
+    public void deleteUser(int id) {
+        var entity = entityManager.find(User.class, id);
+        entityManager.remove(entity);
+    }
     
 }
