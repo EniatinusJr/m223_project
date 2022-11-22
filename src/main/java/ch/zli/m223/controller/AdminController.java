@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -30,5 +31,13 @@ public class AdminController {
     public List<Booking> index(@PathParam("date") LocalDate date) {
         return adminService.findAll(date);
     }
+
+    @DELETE
+    @Path("/booking/{id}")
+    @Operation(summary = "Deletes one booking.", description = "Deletes one booking.")
+    public void cancel(@PathParam("id") int id) {
+        adminService.deleteBooking(id);
+    }
+
     
 }

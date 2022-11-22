@@ -6,6 +6,7 @@ import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 
 import ch.zli.m223.model.Booking;
 
@@ -19,6 +20,12 @@ public class AdminService {
         var query = entityManager.createQuery("FROM Booking b WHERE b.date=:date", Booking.class).setParameter("date", date);
         //var query = entityManager.find(Booking.class, date);
         return query.getResultList();
+    }
+
+    @Transactional
+    public void deleteBooking(int id) {
+        var entity = entityManager.find(Booking.class, id);
+        entityManager.remove(entity);
     }
     
 }
