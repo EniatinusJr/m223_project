@@ -28,7 +28,7 @@ public class AuthService {
            .sign();
         return token;
     }
-/*
+
     @Transactional
     public boolean userExists(String email, String password) {
         boolean doesExist = false;
@@ -40,7 +40,7 @@ public class AuthService {
             }
         }
         return doesExist;
-    }*/
+    }
 
     @Transactional
     public User createUser(User user) {

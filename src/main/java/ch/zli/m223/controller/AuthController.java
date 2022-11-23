@@ -18,7 +18,7 @@ public class AuthController {
     
     @Inject
     AuthService authService;
-    /*
+    
     @POST
     @Path("/login/{email}/{password}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -29,7 +29,7 @@ public class AuthController {
         }else{
             return null;
         }
-    }*/
+    }
 
     @POST
     @Path("/register")
