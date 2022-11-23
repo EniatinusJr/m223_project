@@ -1,5 +1,5 @@
 # Appliation für die Buchung von Co-Working Arbeitsplätzen
-Mit dieser Applikation kann man über Rest-Endpunkte Arbeitsplätze in einem Co-Workingspace buchen, wie auch ein Meetingraum falls nötigen oder zusätzliches Equipment.
+Mit dieser Applikation kann man über Rest-Endpunkte Arbeitsplätze in einem Co-Workingspace buchen, wie auch ein Meetingraum falls nötigen oder zusätzliches Equipment. Als Besucher kann man sich Registrieren und Anmelden. Als Administrator kann man Buchungen editieren, löschen, akzeptieren oder ablehnen und Mitglieder verwalten.
 
 ## Projekt aufsetzten
 - Das Projekt klonen
