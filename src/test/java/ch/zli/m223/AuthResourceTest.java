@@ -13,7 +13,7 @@ public class AuthResourceTest {
     @Test
     public void testLoginSuccessEndpoint() {
         given()
-                .when().post("http://localhost:8080/auth/login/maurin%40schucan.ch/testlol1234")
+                .when().post("http://localhost:8080/auth/login/maurin@schucan.ch/testlol1234")
                 .then()
                 .statusCode(200);
     }
