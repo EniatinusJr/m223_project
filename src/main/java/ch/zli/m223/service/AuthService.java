@@ -1,5 +1,6 @@
 package ch.zli.m223.service;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -11,7 +12,6 @@ import javax.transaction.Transactional;
 
 import org.eclipse.microprofile.jwt.Claims;
 
-import ch.zli.m223.model.Role;
 import ch.zli.m223.model.User;
 import io.smallrye.jwt.build.Jwt;
 
@@ -37,7 +37,7 @@ public class AuthService {
              .upn("jdoe@quarkus.io") 
              .groups(new HashSet<>(Arrays.asList("Administrator"))) 
              .claim(Claims.birthdate.name(), "2022-11-23")
-             .expiresIn(3600) 
+             .expiresIn(Duration.ofHours(24)) 
            .sign();
         return token;
     }
@@ -57,8 +57,6 @@ public class AuthService {
 
     @Transactional
     public boolean isAdmin(String email, String password) {
-        Role role = new Role();
-        role.setRole("Administrator");
         boolean isAdmin = false;
         var entities = entityManager.createQuery("FROM User", User.class);
         List<User> users = entities.getResultList();
