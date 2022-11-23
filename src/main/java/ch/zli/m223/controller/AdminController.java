@@ -3,6 +3,7 @@ package ch.zli.m223.controller;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -23,6 +24,7 @@ import ch.zli.m223.service.AdminService;
 
 @Path("/admin")
 @Tag(name = "Admin", description = "Handling of all requests from admins")
+@RolesAllowed({"Administrator"})
 public class AdminController {
 
     @Inject

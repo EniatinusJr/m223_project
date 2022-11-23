@@ -3,4 +3,4 @@
 - Namen der Entitäten von Deutsch auf Englisch geändert um konsistent beim naming zu bleiben.
 
 # Testdaten
-Die Testdaten werden im import.sql file definiert, welches im resources folder des projektes liegt. 
+Die Testdaten werden im import.sql file definiert, welches im resources folder des projektes liegt. Da sie im resources folder des Projekt liegen, werden sie direkt beim starten der Applikation in die Datenbank geschrieben.

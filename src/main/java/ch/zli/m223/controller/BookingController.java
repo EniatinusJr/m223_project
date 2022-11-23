@@ -1,5 +1,6 @@
 package ch.zli.m223.controller;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -18,11 +19,12 @@ import ch.zli.m223.service.BookingService;
 
 @Path("/booking")
 @Tag(name = "Bookings", description = "Handling of bookings")
+@RolesAllowed({"Mitglied", "Administrator"})
 public class BookingController {
     
     @Inject
     BookingService bookingService;
-
+    
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)

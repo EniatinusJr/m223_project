@@ -31,7 +31,7 @@ public class TokenSecuredResource {
 
     @GET
     @Path("roles-allowed") 
-    @RolesAllowed({ "User", "Admin" }) 
+    @RolesAllowed({ "Mitglied", "Admin" }) 
     @Produces(MediaType.TEXT_PLAIN)
     public String helloRolesAllowed(@Context SecurityContext ctx) {
         return getResponseString(ctx) + ", birthdate: " + jwt.getClaim("birthdate").toString(); 
