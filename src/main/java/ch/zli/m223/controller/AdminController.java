@@ -49,7 +49,7 @@ public class AdminController {
     @Path("/member/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    @Operation(summary = "Updates one Entry", description = "Updates one Entry")
+    @Operation(summary = "Updates one user", description = "Updates one user")
     public User update(User user) {
         return adminService.updateUser(user);
     }
