@@ -15,3 +15,16 @@ Die Testdaten werden im import.sql file definiert, welches im resources folder d
 ## Änderungen an den Fachklassen
 - startTime und endTime aus der Entity MeetingRaum genommen und in die Booking Entity bewegt, dadurch können, falls ein Raum zu der Buchung dazu kommt, die Start- und Endzeit festgelegt werden.
 - Namen der Entitäten von Deutsch auf Englisch geändert um konsistent beim naming zu bleiben.
+
+
+### Logindaten für Applikation:
+- Administrator: 
+    Benutzername= maurin@schucan.ch
+    Passwort= testlol1234
+
+- Mitglied:
+    Benutzername= mattia.loiarro@gmail.com
+    Passwort= daddychamber69
+
+### Link zum Repository
+https://github.com/EniatinusJr/m223_project/tree/master
