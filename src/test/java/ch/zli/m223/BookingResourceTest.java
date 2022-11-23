@@ -18,14 +18,10 @@ public class BookingResourceTest {
         @TestSecurity(user = "testuser", roles = {"Mitglied"})
         public void testIndexBookingEndpoint() {
                 given()
-                                .when().get("/booking/1")
-                                .then()
-                                .statusCode(204);
+                        .when().get("/booking/1")
+                        .then()
+                        .statusCode(200);
         }
 
-        @Test
-        public void testUpdateEndpoint() {
-
-        }
 
 }
