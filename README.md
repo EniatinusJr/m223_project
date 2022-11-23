@@ -23,6 +23,8 @@ Die API Dokumentation ist unter http://localhost:8080/q/swagger-ui/ zu finden.
 Die  Tests können mit ./mvnw quarkus:test ausgeführt werden oder nach dem starten der Applikation im Quarkus terminal r drücken.
 
 ### Logindaten für Applikation:
+- Login Url: http://localhost:8080/auth/login
+
 - Administrator: 
     Benutzername= maurin@schucan.ch
     Passwort= testlol1234
