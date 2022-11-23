@@ -65,5 +65,31 @@ public class AdminResourceTest {
                 .statusCode(200);
     }
 
+    // Tests Verwaltung von Users durch Admin
+    @Test
+    public void testDeleteUserEndpointSuccess() {
+        given().header("Authorization", "Bearer " + adminToken)
+                .when().delete("http://localhost:8080/admin/member/" + 2)
+                .then()
+                .statusCode(204);
+    }
+
+    @Test
+    public void testCreateUserSuccess() {
+        given().header("Authorization", "Bearer " + adminToken)
+                .contentType(ContentType.JSON)
+                .body("{\"prename\":\"test\",\"surname\":\"test\",\"email\":\"test@test.test\",\"password\":\"test\",\"role\":{\"id\":1}}")
+                .when().post("http://localhost:8080/admin/member")
+                .then()
+                .statusCode(200);
+    }
+
+    @Test
+    public void testDeleteUserEndpointFail() {
+        given().header("Authorization", "Bearer " + memberToken)
+                .when().delete("http://localhost:8080/admin/member/" + 2)
+                .then()
+                .statusCode(403);
+    }
 
 }
